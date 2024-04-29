@@ -1,0 +1,15 @@
+/* Different banners for Desktop & Mobile (Free themes only) https://www.youtube.com/watch?v=sf_4yioezwY&ab_channel=AmineAmmari*/
+
+/* Show on desktop Only */
+@media screen and (max-width: 750px) {
+  .banner, slideshow-component {
+    display: none;
+  }
+}
+
+/* Show on mobile Only */
+@media screen and (min-width: 750px) {
+  .banner, slideshow-component {
+    display: none;
+  }
+}
