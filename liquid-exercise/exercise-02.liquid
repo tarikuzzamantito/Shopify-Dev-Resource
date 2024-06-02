@@ -1,0 +1,90 @@
+<div class="custom-cl">  
+  {% comment %}
+  Shopify Liquid If Condition
+  Video URL: https://youtu.be/gUrQO4Tz_i4?list=PL-to22yuZSLvy03dSAYaTUzD6bq9JQyYH
+  Logical Operators: || => [or] && => [and]
+  {% endcomment %}
+  <h1>{{ "Grading System in Bangladesh. "}}</h1>
+
+  {% assign result = 40 %}
+  {% if result > 100 %}
+  <p>Exam marks must be in between 0 to 100</p>
+  {% elsif result > 80 and result <= 100 %}
+    <p>You have got A+</p>
+  {% elsif result >= 70 and result < 70 %}
+    <p>You have got A</p>
+  {% elsif result >= 60 and result < 70 %}
+    <p>You have got A-</p>
+  {% elsif result >= 50 and result < 60 %}
+    <p>You have got B</p>
+  {% elsif result >= 40 and result < 50 %}
+    <p>You have got C</p>
+  {% elsif result >= 33 and result < 40 %}
+    <p>You have got D</p>
+  {% else %}
+    <p>Alas! You have Failed.</p>
+  {% endif %}
+</div>
+
+<div class="custom-cl">
+  {% comment %}
+  If Condition & Unless Condition
+  Video URL: https://youtu.be/Rh8x5V_lNTY?list=PL-to22yuZSLvy03dSAYaTUzD6bq9JQyYH
+  {% endcomment %}
+  
+  {% assign color = "Red" %}
+
+  {% if color != "Green" %}
+  <p>The name of the color is {{ color }}</p>
+  {% else %}
+  <p>The name of the color is not {{ color }}</p>
+  {% endif %}
+  
+  {% unless color == "Green" %}
+  <p>The name of the color is {{ color }}</p>
+  {% else %}
+  <p>The name of the color is not {{ color }}</p>
+  {% endunless %}
+</div>
+
+<div class="custom-cl">
+  {% comment %}
+  Liquid Case When Condition
+  Video URL: https://youtu.be/AMOtsSWYi8Y?list=PL-to22yuZSLvy03dSAYaTUzD6bq9JQyYH
+  {% endcomment %}
+  
+  {% assign name = "Tito" %}
+  {% case name %}
+  {% when "Tito" %}
+  <p>Hi {{ name }}</p>
+  {% when "Toyeeba" %}
+  <p>Hi {{ name }}</p>
+  {% else %}
+  <p>None of the above.</p>
+  {% endcase %}
+</div>
+
+<style>
+  h1{
+    color: white;
+  }
+.custom-cl {
+  display: flex;
+  with: 100vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-image: url("https://cdn.shopify.com/s/files/1/0533/2089/files/shopify-unite-announcements-2021.jpg?v=1624467885");  
+  background-position: center center;
+  background-size: center;
+  background-repeat: no-repeat;
+}
+</style>
+<script>
+  var name = "Bangladesh";
+  console.log(name);
+</script>
