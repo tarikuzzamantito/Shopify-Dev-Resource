@@ -1,0 +1,55 @@
+<div class="custom-cl">  
+  {% comment %}
+  Shopify Liquid For Loop - Shopify Loops
+  Video URL: https://youtu.be/Hbc-OgzXXS4?list=PL-to22yuZSLvy03dSAYaTUzD6bq9JQyYH
+  Logical Operators: || => [or] && => [and]
+  {% endcomment %}
+  <h1>{{ "Shopify Liquid For Loop - Shopify Loops. "}}</h1>
+
+  {% for product in collection.products %}
+    <p>{{ product.title }}</p>
+  {% else %}
+    <p>This collection is empty.</p>
+  {% endfor %}
+  
+  {% for i in (1..3) %}
+    {{ i | replace: i, "Bangladesh" | upcase }}
+  {% endfor %}
+
+  
+  {% for item in (1..20) %}
+    {% if forloop.last %}
+      This is index number {{ forloop.index }}.
+    {% else %}
+      {{ item }}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  h1{
+    color: white;
+  }
+.custom-cl {
+  display: flex;
+  with: 100vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-image: url("https://cdn.shopify.com/s/files/1/0533/2089/files/shopify-unite-announcements-2021.jpg?v=1624467885");  
+  background-position: center center;
+  background-size: center;
+  background-repeat: no-repeat;
+}
+</style>
+<script>
+  // JavaScript For In Loop
+  let arr = [ 0, 1, 2, 3, 4 ];
+  for(item in arr) {
+  console.log(item);
+  }
+</script>
