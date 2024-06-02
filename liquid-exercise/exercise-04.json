@@ -1,0 +1,16 @@
+{
+    "key": "value",
+    "name": "Tito",
+    "age": 40,
+    "isMarried": true,
+    "hobbies": [
+        "cricket",
+        "basketball",
+        "football"
+    ],
+    "country": "Bangladesh",
+    "person": {
+        "name": "Tuli",
+        "age": "29"
+    }
+}
