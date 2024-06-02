@@ -1,0 +1,118 @@
+{% comment %}
+Announcement Bar
+{% endcomment %}
+
+<style>
+  .myliq {
+    background: {{ section.settings.announcement_bg_color }};
+    color: {{ section.settings.announcement_text_color }};
+    text-align: {{ section.settings.text_alignment }};
+    padding: {{ section.settings.announcement_text_padding }}px 0;
+    font-size: {{ section.settings.announcement_font_size }}px;
+  }
+</style>
+
+  {% if section.settings.show_announcement_bar %}
+    <div class="myliq">
+      {{ section.settings.announcement_text }}
+    </div>
+    {% if section.settings.image_upload %}
+    <div>
+      <img alt="Image" src="{{ section.settings.image_upload | image_url: width: 100 }}" />
+    </div>
+    {% endif %} 
+  {% endif %}  
+
+<div>
+  {{ section.settings.html_embed }}
+</div>
+
+{% schema %}
+{
+  "name": "AC Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement_bar",
+      "label": "Show Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Welcome to our store"      
+    },
+    {
+      "type": "range",
+      "id": "announcement_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "announcement_text_padding",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Set Padding",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "announcement_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "announcement_bg_color",
+      "label": "Background Color",
+      "default": "linear-gradient(#ffffff, #000000)"
+    },
+    {
+      "type": "radio",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "html",
+      "id": "html_embed",
+      "label": "Write Custom HTML Code"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_upload",
+      "label": "Upload a Image",
+      "info": "Image size will be 100 x 100px"
+    }
+
+
+
+
+
+
+
+  ]
+}
+{% endschema %}
