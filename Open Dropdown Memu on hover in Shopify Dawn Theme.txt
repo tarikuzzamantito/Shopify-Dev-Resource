@@ -1,7 +1,7 @@
 https://www.crotemplateslibrary.com/blogs/shopify-liquid-coding-tutorial/how-to-show-dropdown-menu-open-on-hover-in-shopify-dawn-theme      
 https://www.youtube.com/watch?v=B6tzlfieUIQ&ab_channel=JahinShahriar
 
-      // START Show dropdown menu Open on hover in Shopify Dawn Theme
+      // START Show dropdown menu Open on hover in Shopify Dawn Theme Pest After <script> Tag Start
       const inlineMenu = document.querySelector(".header__inline-menu");
       const detailsItems = inlineMenu.querySelectorAll("details");
 
