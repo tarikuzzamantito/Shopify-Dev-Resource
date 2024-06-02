@@ -1,1 +1,40 @@
+<div class="custom-cl">
+  {% assign name = "Bangladesh." %}
+  
+  <h1>{{ "This is call an Object in Shopify Liquid. " | downcase }} {{ name | upcase }}</h1>
 
+  {% comment %}
+  <h1>{{ "I love my County. "}}</h1>
+  {% endcomment %}
+  {% assign greeting = "Welcome to new Video" %}
+  {{ greeting }}  
+
+  {% assign number1 = 12 %}
+  {% assign number2 = 5 %}
+  <p>Answer is {{ number1 | modulo: number2 }}</p>
+</div>
+
+<style>
+  h1{
+    color: white;
+  }
+.custom-cl {
+  display: flex;
+  with: 100vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-image: url("https://cdn.shopify.com/s/files/1/0533/2089/files/shopify-unite-announcements-2021.jpg?v=1624467885");  
+  background-position: center center;
+  background-size: center;
+  background-repeat: no-repeat;
+}
+</style>
+<script>
+  var name = "Bangladesh";
+  console.log(name);
+</script>
