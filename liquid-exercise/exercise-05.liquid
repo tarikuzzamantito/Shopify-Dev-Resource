@@ -1,1 +1,11 @@
+{% comment %}
 
+{{ content_for_layout }}
+{{ content_for_header }}
+
+{% section 'name' %}
+{% render 'name' %}
+{{ 'name.css' | asset_url | stylessheet }}
+<script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+
+{% endcomment %}
