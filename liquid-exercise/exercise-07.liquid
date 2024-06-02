@@ -1,0 +1,55 @@
+{% comment %}
+  Shopify Liquid Announcement Bar without Presets
+{% endcomment %}
+
+<style>
+  .myliquid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+</style>
+
+{% for block in section.blocks %}
+  {% if block.settings.body_text %}
+    <div class="myliquid">
+      <div class="myliq">{{ block.settings.body_text | upcase }}</div>
+    </div>
+  {% endif %}
+{% endfor %}  
+
+{% schema %}
+  {
+    "name": "Announcement Bar",
+    "settings": [
+      
+    ],
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "body_text",
+            "label": "Announcement Text",
+            "default": "Free Shipping Over $50"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  }
+{% endschema %}
